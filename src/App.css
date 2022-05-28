@@ -23,11 +23,11 @@ header {
   background-color: #1c1c1c;
 }
 .header-text {
-  display: flex;
+   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin-top:5%;
+  height:40vh;
 }
 .logo {
   left:20%;
@@ -55,7 +55,8 @@ header {
   content: "";
   width: 40px;
   height: 10px;
-  background: linear-gradient(#ff469f, #ff6062);
+  /* background: linear-gradient(#ff469f, #ff6062); */
+  background: linear-gradient(45deg,#F05A27, #DA2A53);
   position: absolute;
   left: 10px;
   top: 100%;
@@ -63,4 +64,10 @@ header {
 .icons > * {
   font-size: 20px;
   margin-right:10px;
+}
+.header-options {
+  display: flex;
+}
+.btn {
+  background-color: linear-gradient(45deg,#F05A27, #DA2A53);
 }
