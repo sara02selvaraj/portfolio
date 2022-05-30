@@ -1,17 +1,56 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
 :root{
   --ff-primary:'Roboto', sans-serif;
-  --fs-body: 20px;
-  --fs-h1: 32px;
-  --fw-reg: 400;
+
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.50rem;
+  --fs-body: 1rem;
+
+  --fw-reg: 300;
+  --fw-bold: 700;
+
   --clr-primary: white;
+  --clr-accent:#ff6062;
+
+  --bg-dark: #1c1c1c;
+}
+@media (min-width: 800px) {
+  :root {
+      --fs-h1: 4.5rem;
+      --fs-h2: 3.75rem;
+      --fs-h3: 2rem;
+      --fs-body: 1.125rem;
+      --fw-reg: 400;
+  }
 }
 
 body {
+  padding:0;
+  margin:0;
   font-family: var(--ff-primary);
   font-size: var(--fs-body);
   font-weight: var(--fw-reg);
   color: var(--clr-primary);
+  background-color: var(--bg-dark);
+  line-height: 1.6;
 }
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
 .navbar {
   display: flex;
   justify-content: space-around;
@@ -20,18 +59,21 @@ body {
 header {
   width: 100%;
   height: 60vh;
-  background-color: #1c1c1c;
+  
 }
 .header-text {
-   display: flex;
+  max-width:96%;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height:40vh;
+  
 }
 .logo {
-  left:20%;
+  /* left:20%; */
   transform: translate(-50%, -50%);
+  /* top: 3%; */
+  left:10%;
   top: 3%;
   position: absolute;
   width: 5%;
@@ -42,13 +84,19 @@ header {
 }
 .nav-link {
   list-style-type: none;
-  margin-right: 30px;
+  margin-right: 1.875em;
+}
+.header--title{
+  margin-top: 2em;
+}
+.text-accent{
+  color: var(--clr-accent);
 }
 .typewriter-text {
-  font-size: 50px;
+  font-size: var(--fs-h2);
   font-family: "Ubuntu", sans-serif;
   position: relative;
-  margin-bottom: 40px;
+  margin-top: 1em;
 }
 
 .typewriter-text::after {
@@ -62,12 +110,33 @@ header {
   top: 100%;
 }
 .icons > * {
-  font-size: 20px;
-  margin-right:10px;
+  font-size: var(--fs-body);
+  margin-top: 2em;
+  margin-right:0.6em;
 }
 .header-options {
-  display: flex;
+  display:block;
+  margin-top: 0.625em;
 }
 .btn {
-  background-color: linear-gradient(45deg,#F05A27, #DA2A53);
+  padding: .5em 2em;
+  margin: 1.5em;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--clr-primary);
+  border:2px solid #F05A27;
+  outline: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg,#F05A27, #DA2A53);
+}
+.btn:hover {
+  background:#1c1c1c;
+}
+@media (min-width: 600px) {
+  .header-text {
+    height:40vh;
+  }
+}
+.about--img {
+  min-width: 250px;
 }
