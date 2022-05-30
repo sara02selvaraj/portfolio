@@ -1,38 +1,142 @@
-.App {
-  text-align: center;
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+:root{
+  --ff-primary:'Roboto', sans-serif;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+  --fs-h1: 3rem;
+  --fs-h2: 2rem;
+  --fs-h3: 1.50rem;
+  --fs-body: 1rem;
+
+  --fw-reg: 300;
+  --fw-bold: 700;
+
+  --clr-primary: white;
+  --clr-accent:#ff6062;
+
+  --bg-dark: #1c1c1c;
+}
+@media (min-width: 800px) {
+  :root {
+      --fs-h1: 4.5rem;
+      --fs-h2: 3.75rem;
+      --fs-h3: 2rem;
+      --fs-body: 1.125rem;
+      --fw-reg: 400;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  padding:0;
+  margin:0;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  font-weight: var(--fw-reg);
+  color: var(--clr-primary);
+  background-color: var(--bg-dark);
+  line-height: 1.6;
+}
+h1,
+h2,
+h3 {
+    line-height: 1;
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-h1) }
+h2 { font-size: var(--fs-h2) }
+h3 { font-size: var(--fs-h3) }
+
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  /* box-shadow: 5px 5px 40px rgba(0, 0, 0.3); */
+}
+header {
+  width: 100%;
+  height: 60vh;
+  
+}
+.header-text {
+  max-width:96%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  
+}
+.logo {
+  /* left:20%; */
+  transform: translate(-50%, -50%);
+  /* top: 3%; */
+  left:10%;
+  top: 3%;
+  position: absolute;
+  width: 5%;
+}
+.nav-items {
+  display: flex;
+  justify-content: space-evenly;
+}
+.nav-link {
+  list-style-type: none;
+  margin-right: 1.875em;
+}
+.header--title{
+  margin-top: 2em;
+}
+.text-accent{
+  color: var(--clr-accent);
+}
+.typewriter-text {
+  font-size: var(--fs-h2);
+  font-family: "Ubuntu", sans-serif;
+  position: relative;
+  margin-top: 1em;
 }
 
-.App-link {
-  color: #61dafb;
+.typewriter-text::after {
+  content: "";
+  width: 40px;
+  height: 10px;
+  /* background: linear-gradient(#ff469f, #ff6062); */
+  background: linear-gradient(45deg,#F05A27, #DA2A53);
+  position: absolute;
+  left: 10px;
+  top: 100%;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.icons > * {
+  font-size: var(--fs-body);
+  margin-top: 2em;
+  margin-right:0.6em;
+}
+.header-options {
+  display:block;
+  margin-top: 0.625em;
+}
+.btn {
+  padding: .5em 2em;
+  margin: 1.5em;
+  font-family: var(--ff-primary);
+  font-size: var(--fs-body);
+  color: var(--clr-primary);
+  border:2px solid #F05A27;
+  outline: none;
+  border-radius: 20px;
+  background: linear-gradient(45deg,#F05A27, #DA2A53);
+}
+.btn:hover {
+  background:#1c1c1c;
+}
+@media (min-width: 600px) {
+  .header-text {
+    height:40vh;
   }
-  to {
-    transform: rotate(360deg);
-  }
+}
+.about--img {
+  min-width: 250px;
 }
