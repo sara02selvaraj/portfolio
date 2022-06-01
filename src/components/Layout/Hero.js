@@ -1,13 +1,11 @@
-import Navbar from './Navbar';
-import {FaFacebookF,FaGithub, FaLinkedinIn, FaTwitter} from 'react-icons/fa'
+import {FaFacebookF, FaGithub, FaLinkedinIn,FaTwitter} from 'react-icons/fa'
 import ReactTypingEffect from 'react-typing-effect'
 
-function Header() {
-    return (
-        <header>
-            <Navbar/>
-           <div className='header-text'>
-                <h3 className='header--title'>Hi I'm <span className='text-accent'>Uma</span></h3>
+function Hero() {
+   return(
+       <div className='hero' id="hero">
+           <div className='content'>
+           <h3 className='hero-title'>Hi I'm <span className='text-accent'>Uma</span></h3>
                 <div className='typewriter-text'>
                     <ReactTypingEffect
                         className="typewriter-text-1"
@@ -23,18 +21,20 @@ function Header() {
                     />
                 </div>
                 <div className="icons">
-                    <FaFacebookF/>
-                    <FaGithub/>
-                    <FaLinkedinIn/>
-                    <FaTwitter/>
+                    <ul>
+                        <li className="nav-item"><a href=""><FaFacebookF/></a></li>
+                        <li className="nav-item"><a href=""><FaGithub/></a></li>
+                        <li className="nav-item"><a href=""><FaLinkedinIn/></a></li>
+                        <li className="nav-item"><a href=""><FaTwitter/></a></li>
+                    </ul>
                 </div>
-                <div className='header-options'>
+                <div className='hero-options'>
                     <button className='btn'>View Work</button>
                     <button className='btn'>Resume</button>
                 </div>
-            </div>
-        </header>
-    )
+           </div>
+       </div>
+   )
 }
 
-export default Header
+export default Hero
