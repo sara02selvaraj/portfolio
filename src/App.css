@@ -193,7 +193,6 @@ h3 { font-size: var(--fs-h3) }
   display: flex;
   justify-content: center;
   padding-left:0;
-  border: 2px solid red;
 }
 .icons li {
   padding: 1rem;
@@ -232,13 +231,12 @@ h3 { font-size: var(--fs-h3) }
 .title-text {
   text-align: center;
   font-size: 2.95rem;
-  
 }
 .line {
   display: block;
-  width: 40px;
+  width: 50px;
   height: 3px;
-  margin: 5px auto;
+  margin: 10px auto;
   background-color: var(--bg-dark);
   margin-bottom: 2em;
 }
@@ -298,7 +296,7 @@ h3 { font-size: var(--fs-h3) }
 .skills {
   background-color: #f8f8f8;;
   margin: auto;
-  padding: 8rem 1rem 2rem 1rem;
+  padding: 8rem 1rem 0 1rem;
   width: 100%;
 }
 .skills-container{
@@ -323,6 +321,87 @@ h3 { font-size: var(--fs-h3) }
   }
   .skills-container > * {
     font-size: 40px;
+  }
+}
+.projects {
+  background-color: #f8f8f8;;
+  margin: auto;
+  padding: 8rem 1rem 6rem 1rem;
+  width: 100%;
+}
+.projects-container{
+  max-width: 1240px;
+  width:80%;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 2rem;
+}
+.card {
+  width:330px;
+  overflow: hidden;
+  border: 1px solid #bacdd8;
+  border-radius: 12px;
+  box-shadow: 0px 0px 15px -5px;
+}
+.card-header img{
+  overflow: hidden;
+  height: 225px;
+  width:100%;
+  object-fit: cover;
+}
+.card-body {
+  padding: 0 1rem;
+}
+.card-body .card-title {
+  font-size: var(--fs-body);
+  text-transform: uppercase;
+  font-weight: var(--fw-bold);
+}
+.card-footer {
+  padding: 1rem;
+  display: flex;
+}
+.btn-secondary {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 7px;
+  border: 3px solid #aca7a7;
+  margin-right: 0.5rem;
+  position: relative;
+  z-index: 1;
+}
+.btn-secondary a {
+  text-decoration: none;
+  font-family: inherit;
+  font-weight: var(--fw-bold);
+  color: black;
+}
+.btn-secondary:hover a{
+  color: #fff;
+  cursor: pointer;
+}
+.btn-secondary:before {
+  transition: 0.5s all ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  right:50%;
+  bottom: 0;
+  opacity: 0;
+  content: '';
+  background: linear-gradient(45deg,#F05A27, #DA2A53);
+}
+.btn-secondary:hover:before {
+  transition: 0.5s all ease;
+  left:0 ;
+  right: 0;
+  opacity: 1;
+  z-index: -1;
+}
+@media (max-width: 940px) {
+  .projects-container {
+    grid-template-columns: 1fr;
   }
 }
 
