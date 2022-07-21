@@ -7,13 +7,17 @@ export const projectDetails = [
         id: 1,
         title: 'Movie WatchList App',
         img: MovieImg,
-        content: 'Find the latest trending movies and add it to wishlist to binge watch on your weekend.'
+        content: 'Find the latest trending movies and add it to wishlist to binge watch on your weekend.',
+        demoLink: 'https://favoritemovie-watchlist.netlify.app/',
+        codeLink: 'https://github.com/sara02selvaraj/Movie-wishlist'
     },
     {
          id: 2,
          title: 'Quizzical App',
          img: QuizImg,
-         content: 'Fun Quizzical app to flex your brain with various category and get instant results.'
+         content: 'Fun Quizzical app to flex your brain with various category and get instant results.',
+         demoLink: 'https://quizzecal.netlify.app/',
+         codeLink: 'https://github.com/sara02selvaraj/Quizzical-App'
      },
 ]
 

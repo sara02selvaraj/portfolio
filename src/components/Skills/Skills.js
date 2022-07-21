@@ -2,7 +2,7 @@ import {FaHtml5, FaCss3,FaSass, FaBootstrap,FaReact,FaNode,FaGitAlt,FaGithub} fr
 import {SiRedux,SiMongodb,SiTailwindcss,SiJavascript} from 'react-icons/si'
 function Skills() {
     return (
-        <div className="skills">
+        <div className="skills" id="skills">
             <h3 className="title-text">Skills</h3>
              <span className='line'></span>
              <div className="skills-container">

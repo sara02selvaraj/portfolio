@@ -14,8 +14,8 @@ function Card({item}) {
           </p>
         </div>
         <div className="card-footer">
-          <button className='btn-secondary'><a href="#">Demo</a></button>
-          <button className='btn-secondary'><a href="#">Github</a></button>
+          <button className='btn-secondary'><a href={item.demoLink} target="blank">Demo</a></button>
+          <button className='btn-secondary'><a href={item.codeLink} target="blank">Github</a></button>
         </div>
       </div>
       {/* <div className="card">

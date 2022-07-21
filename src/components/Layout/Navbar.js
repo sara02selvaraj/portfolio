@@ -29,13 +29,14 @@ function Navbar() {
                         className="nav-link" onClick={closeMenu}>About</Link>
                     </li>
                     <li className='nav-item'>
+                        <Link to="skills" spy={true} smooth={true} offset={-150} duration={500}
+                        className="nav-link" onClick={closeMenu}>Skills</Link>
+                    </li>
+                    <li className='nav-item'>
                         <Link to="projects" spy={true} smooth={true} offset={-100} duration={500}
                          className="nav-link" onClick={closeMenu}>Projects</Link>
                     </li>
-                    <li className='nav-item'>
-                        <Link to="contact" spy={true} smooth={true} offset={-150} duration={500}
-                        className="nav-link" onClick={closeMenu}>Contact</Link>
-                    </li>
+                    
                 </ul>
             </nav>
         </div>
